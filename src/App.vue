@@ -7,6 +7,7 @@
  
 <script>
 import home from "./views/home/Home";
+
 export default {
   components: {
     home,
@@ -14,5 +15,5 @@ export default {
 };
 </script>
 
-<style lang="less" scpoed>
+<style lang="less">
 </style>
