@@ -2,13 +2,13 @@
   <div class="recommend">
     <div class="infos">
       <div class="title">热销推荐</div>
-      <div class="info" v-for="obj in infoList" :key="obj.id">
+      <div class="info" v-for="obj in recommendList" :key="obj.id">
         <div class="info-left">
           <img :src="obj.imgUrl" alt="" class="info-img" />
         </div>
         <div class="info-right">
           <p class="info-title">{{ obj.title }}</p>
-          <p class="info-content">{{ obj.content }}</p>
+          <p class="info-content">{{ obj.desc }}</p>
           <button class="info-btn">查看详情</button>
         </div>
       </div>
@@ -20,38 +20,13 @@
 <script>
 export default {
   data() {
-    return {
-      infoList: [
-        {
-          id: 1,
-          title: "成都熊猫之旅",
-          content: "含往返飞机票+5晚住宿",
-          imgUrl:
-            "//imgs.qunarzz.com/p/p97/1512/73/97da2a9e39df59f7.jpg_256x160_acb41adf.jpg",
-        },
-        {
-          id: 2,
-          title: "九寨沟之旅",
-          content: "含往返飞机票+8晚住宿",
-          imgUrl:
-            "//imgs.qunarzz.com/p/p9/1409/28/8231ad3595d97ee1ffffffffc8d65eac.jpg_256x160_cd751095.jpg",
-        },
-        {
-          id: 3,
-          title: "成都自由行",
-          content: "含往返飞机票+8晚住宿",
-          imgUrl:
-            "//imgs.qunarzz.com/p/p19/1809/b9/2a3d362aabcbb02.jpg_256x160_28907832.jpg",
-        },
-        {
-          id: 4,
-          title: "云南丽江游",
-          content: "含往返飞机票+4晚住宿",
-          imgUrl:
-            "//imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg",
-        },
-      ],
-    };
+    return {};
+  },
+  props: {
+    recommendList: {
+      type: Array,
+      default: [],
+    },
   },
 };
 </script>

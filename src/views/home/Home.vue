@@ -3,13 +3,13 @@
     <!-- 头部组件 -->
     <tit></tit>
     <!-- 轮播图组件 -->
-    <home-swiper />
+    <home-swiper :swiperList="swiperList" />
     <!-- 导航图标组件 -->
-    <icons />
+    <icons :iconList="iconList" />
     <!-- 推荐组件 -->
-    <recommend />
+    <recommend :recommendList="recommendList" />
     <!-- 周末去哪组件 -->
-    <weeken />
+    <weeken :weekendList="weekendList" />
   </div>
 </template>
 
@@ -20,6 +20,7 @@ import homeSwiper from "./children/HomeSwiper";
 import icons from "./children/icons";
 import recommend from "./children/Recommend";
 import weeken from "./children/Weekend";
+import axios from "axios";
 
 export default {
   components: {
@@ -28,6 +29,24 @@ export default {
     icons,
     recommend,
     weeken,
+  },
+  data() {
+    return {
+      iconList: [],
+      recommendList: [],
+      swiperList: [],
+      weekendList: [],
+    };
+  },
+  mounted() {
+    axios.get("/mock/index.json").then((res) => {
+      // 请求本地json文件内的数据，传递给对应的子组件
+      this.iconList = res.data.data.iconList;
+      this.recommendList = res.data.data.recommendList;
+      this.swiperList = res.data.data.swiperList;
+      this.weekendList = res.data.data.weekendList;
+      console.log(this.weekendList);
+    });
   },
 };
 </script>

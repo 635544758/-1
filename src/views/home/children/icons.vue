@@ -17,55 +17,7 @@
 <script>
 export default {
   data() {
-    return {
-      iconList: [
-        {
-          id: 1,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png",
-          desc: "酒店",
-        },
-        {
-          id: 2,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/flight.png",
-          desc: "机票",
-        },
-        {
-          id: 3,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/train.png",
-          desc: "火车票",
-        },
-        {
-          id: 4,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/package.png",
-          desc: "度假",
-        },
-        {
-          id: 5,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/piao.png",
-          desc: "景点门票",
-        },
-        {
-          id: 6,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/flight.png",
-          desc: "机票",
-        },
-        {
-          id: 7,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/train.png",
-          desc: "火车票",
-        },
-        {
-          id: 8,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/package.png",
-          desc: "度假",
-        },
-        {
-          id: 9,
-          imgUrl: "//s.qunarzz.com/homenode/images/touchheader/piao.png",
-          desc: "景点门票",
-        },
-      ],
-    };
+    return {};
   },
   computed: {
     pages() {
@@ -84,6 +36,12 @@ export default {
         pages[page].push(item);
       });
       return pages;
+    },
+  },
+  props: {
+    iconList: {
+      type: Array,
+      default: [],
     },
   },
 };

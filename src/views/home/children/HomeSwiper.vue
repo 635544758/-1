@@ -1,16 +1,9 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" class="swiper">
+    <swiper :options="swiperOption" class="swiper" v-if="swiperList.length">
       <!-- slides -->
-      <swiper-slide
-        ><img
-          src="//imgs.qunarzz.com/vs_ceph_vcimg/569cae4ae98e9793f7341e85eed73c54.jpeg"
-          alt=""
-      /></swiper-slide>
-      <swiper-slide
-        ><img
-          src="//imgs.qunarzz.com/vs_ceph_vcimg/f03f5ac90ae59d0d9c6332a2bfd9782e.jpeg"
-          alt=""
+      <swiper-slide v-for="item in swiperList" :key="item.id"
+        ><img :src="item.imgUrl" alt=""
       /></swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination" slot="pagination"></div>
@@ -23,11 +16,14 @@ export default {
   data() {
     return {
       swiperOption: {
+        // 插件自动轮播属性
         autoplay: {
           disableOnInteraction: false,
           delay: 2000,
         },
+        // 无缝滚动
         loop: true,
+        // 轮播图小点
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",
@@ -36,6 +32,12 @@ export default {
         reverseDirection: true,
       },
     };
+  },
+  props: {
+    swiperList: {
+      type: Array,
+      default: [],
+    },
   },
 };
 </script> 
