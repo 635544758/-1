@@ -4,12 +4,12 @@
       <!-- slides -->
       <swiper-slide
         ><img
-          src="//m.360buyimg.com/mobilecms/s700x280_jfs/t1/161985/22/9240/98037/60409a82Ed23fd025/9aaec853d3ffbf12.jpg!q70.jpg.dpg"
+          src="//imgs.qunarzz.com/vs_ceph_vcimg/569cae4ae98e9793f7341e85eed73c54.jpeg"
           alt=""
       /></swiper-slide>
       <swiper-slide
         ><img
-          src="//m.360buyimg.com/mobilecms/s700x280_jfs/t1/36958/34/5025/100639/5cbf5749Ee9fcfb22/b6eb36331095813a.jpg!cr_1125x445_0_171!q70.jpg.dpg"
+          src="//imgs.qunarzz.com/vs_ceph_vcimg/f03f5ac90ae59d0d9c6332a2bfd9782e.jpeg"
           alt=""
       /></swiper-slide>
       <!-- Optional controls -->
