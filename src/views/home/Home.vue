@@ -45,7 +45,6 @@ export default {
       this.recommendList = res.data.data.recommendList;
       this.swiperList = res.data.data.swiperList;
       this.weekendList = res.data.data.weekendList;
-      console.log(this.weekendList);
     });
   },
 };

@@ -5,15 +5,23 @@
       <span class="iconfont search">&#xe632;</span>
       <input type="text" placeholder="输入城市/景点游玩主题" />
     </div>
-    <div class="h-right">
-      城市<span class="iconfont arrow-icon">&#xe64a;</span>
-    </div>
+    <router-link to="/City">
+      <div class="h-right">
+        {{ this.$store.state.city
+        }}<span class="iconfont arrow-icon">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 
 <script>
-export default {};
+export default {
+  created() {
+    console.log(this.$router);
+  },
+  methods: {},
+};
 </script>
 
 
@@ -63,9 +71,10 @@ export default {};
     width: 1.24rem;
     float: right;
     text-align: center;
-    font-size: 0.35rem;
+    font-size: 0.3rem;
+    color: white;
     .arrow-icon {
-      font-size: 0.25rem;
+      font-size: 0.2rem;
     }
   }
 }
