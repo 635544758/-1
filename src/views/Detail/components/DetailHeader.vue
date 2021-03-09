@@ -16,14 +16,18 @@
         </div>
       </div>
     </div>
-    <gallery v-show="isGallery" @hideG="hideG" :gallery="gallery" />
+    <fade>
+      <gallery v-show="isGallery" @hideG="hideG" :gallery="gallery" />
+    </fade>
   </div>
 </template>
 
 
 <script>
 import gallery from "../../../components/Gallery/Gallery";
+import fade from "../../../components/Fade";
 import axios from "axios";
+
 export default {
   data() {
     return {
@@ -33,7 +37,9 @@ export default {
   },
   components: {
     gallery,
+    fade,
   },
+
   methods: {
     displayG() {
       this.isGallery = true;

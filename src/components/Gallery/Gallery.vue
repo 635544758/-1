@@ -62,6 +62,7 @@ export default {
   right: 0;
   bottom: 0;
   background-color: black;
+  z-index: 999;
   .gallery-img {
     background-color: white;
     img {

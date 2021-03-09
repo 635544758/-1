@@ -55,7 +55,7 @@ export default {
       .info-title {
         font-size: 0.25rem;
         font-weight: 700;
-        padding-top: 0.1rem;
+        padding-top: 0.2rem;
       }
       .info-content {
         font-size: 0.2rem;

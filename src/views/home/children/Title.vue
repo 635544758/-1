@@ -71,7 +71,7 @@ export default {
     width: 1.24rem;
     float: right;
     text-align: center;
-    font-size: 0.3rem;
+    font-size: 0.24rem;
     color: white;
     .arrow-icon {
       font-size: 0.2rem;
